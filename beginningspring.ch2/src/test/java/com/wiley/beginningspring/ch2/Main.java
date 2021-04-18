@@ -13,7 +13,7 @@ public class Main {
 		
 		// beans like @Repository and @Service can potentially add functionality
 		// as well as create an instance method of the class its under, with 
-		// lowerCase first (AccountService --> accountService bean) etc
+		// lowerCase first (AccountService --> accountService bean) etc as well
 		
 		System.out.println("Before money transfer");
 		System.out.println("Account 1 balance: " + accountService.getAccount(1).getBalance());
