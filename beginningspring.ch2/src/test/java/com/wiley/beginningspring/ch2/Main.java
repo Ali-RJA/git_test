@@ -10,7 +10,11 @@ public class Main {
 		ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("/com/wiley/beginningspring/ch2/ch2-beans.xml");
 		
 		AccountService accountService = applicationContext.getBean("accountService", AccountService.class);
-
+		
+		// beans like @Repository and @Service can potentially add functionality
+		// as well as create an instance method of the class its under, with 
+		// lowerCase first (AccountService --> accountService bean) etc
+		
 		System.out.println("Before money transfer");
 		System.out.println("Account 1 balance: " + accountService.getAccount(1).getBalance());
 		System.out.println("Account 2 balance: " + accountService.getAccount(2).getBalance());		
